@@ -1,0 +1,108 @@
+
+<!-- <div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Sistema de quejas y denuncias
+                </h5>
+                <button type="button" class="close"
+                    data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        ×
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                GeeksforGeeks
+            </div>
+
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                    data-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class=" container-fluid mt--4 col-md-12">
+
+</div>    
+<div class="modal-fade" id="primero">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" >Sistema de Quejas y Denuncias</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+                    <span aria-hidden="true" style="color: white;">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="itemform" (ngSubmit)="saveToList(itemform)">
+                    <div class="col-12">
+                        <!-- <div class="row">
+                            <div class="col-md-12">
+                                <label>Number of Items : </label> {{list[0].value}}
+                            </div>
+                        </div> -->
+
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <label class="form-control-label"><h4>Fecha:</h4></label>
+                                <div class="form-group">
+                                      <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                        </div>
+                                          <input type="text" formControlName="sValue"  placeholder="Selecciona una fecha..." class="form-control" bsDatepicker
+                                          [bsConfig]="{ isAnimated: true, containerClass: 'theme-default' }">
+                                      </div>  
+                                </div>    
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <label class="form-control-label"><h3>Descripción de la Síntesis:</h3></label>
+                                <div class=" form-group">
+                                    <div class=" input-group input-group-merge">
+                                        <textarea neme="descripcionsin" rows="7" cols="50"></textarea>
+                                    </div>
+                                </div>                                    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" (click)="closeModal()" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+                   
+                </form>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="modal-body">
+    <h4>Sistema de Quejas y denuncias</h4>
+    <form [formGroup]="itemform" (ngSubmit)="saveToList(itemform)">
+        <div class="col-md-6">
+            <label>Number of Items : </label> {{list[0].value}}
+        </div>
+        <div class="col-md-6">
+            <label>Item Name</label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control" formControlName="name">
+            <button class="button mt-1" type="submit">Save</button>
+        </div>
+    </form>
+<div> -->

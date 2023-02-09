@@ -1,0 +1,255 @@
+<div class=" header bg-danger pb-6">
+    <div class=" container-fluid">
+      <div class=" header-body">
+        <div class=" row align-items-center py-4">
+          <div class=" col-lg-6 col-7">
+            <h6 class=" h2 text-white d-inline-block mb-0">Información del Expediente</h6>
+            <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+              <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+                <li class=" breadcrumb-item">
+                  <a class="h2 text-white"><i class="fas fa-home"></i> </a>
+                </li>
+                <li class=" breadcrumb-item" >
+                    <a class="h2 text-white">PES</a>
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+ 
+  <div *ngIf="hello==false; else PES">prueba
+  </div>
+  <ng-template #PES>
+  <div class=" container-fluid mt--6">
+    <div class=" card mb-4">
+      <div class=" card-header"><h3 class=" mb-0">Procedimiento Especial Sancionador</h3>
+      </div>
+      <div class=" card-body">
+        <div class=" row">
+            <div class=" col-12">
+                <div class=" form-group">
+                  <div class=" card-header">
+                      <div class="row">
+                          <div class="col-md-3 ">
+                              <label class="form-control-label"><h3>Expediente:</h3></label>
+                              <div class=" form-group">
+                                  <div class=" input-group input-group-merge">
+                                      <input [(ngModel)]='exValue' class=" form-control" placeholder="1/2023-PES-CG" type="text" value="exValue" 
+                                      disabled="true" title="Número de Expediente"/>
+                                  </div>
+                              </div>                                    
+                          </div>
+                          <div class="col-md-1 ">
+                          </div>
+                          <div class="col-md-5 ">
+                              <label class="form-control-label"><h4>Fecha de presentación de la queja o denuncia:</h4></label>
+                              <div class="form-group">
+                                  <div class="form-group">
+                                    <div class="input-group input-group-alternative">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                      </div>
+                                      <input type="text" placeholder="Selecciona una fecha..." class="form-control" bsDatepicker
+                                        [bsValue]="bsValue"
+                                        [bsConfig]="{ isAnimated: true, containerClass: 'theme-default' }">  
+                                    </div>  
+                                  </div>
+                              </div>    
+                          </div>                                                                    
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-5 ">
+                                <label class="form-control-label"><h4>Parte denunciante:</h4></label>
+                                <div class=" form-group">
+                                  <div class="force-to-the-bottom">
+                                    <tag-input class="form-control-lg border-4" theme='bootstrap' [(ngModel)]='denunciante' style="border: 2px;"></tag-input>
+                                  </div>
+                                </div>                                    
+                            </div> 
+                            <div class="col-md-1 ">
+                            </div>
+                            <div class="col-md-5 ">
+                              <label class="form-control-label"><h4>Parte denunciada:</h4></label>
+                              <div class=" form-group">
+                                <div class="force-to-the-bottom">
+                                  <tag-input class="form-control-lg border-4" theme='bootstrap' [(ngModel)]='denunciada' style="border: 2px;"></tag-input>
+                                </div>
+                              </div>                                    
+                          </div>        
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8 ">
+                                <label class="form-control-label"><h4>Materia de la queja o denuncia:</h4></label>
+                                <div class=" form-group">
+                                    <div class=" input-group input-group-merge" >
+                                        <select class="form-control">
+                                            <option hidden>Selecciona una opción:</option>
+                                            <option>Presuntos actos anticipados de campaña.</option>
+                                            <option>Presunto uso de imágenes de menores de niñas, niños y adolescentes.</option>
+                                            <option>Presunta promoción personalizada.</option>
+                                            <option>Presunto uso indebido de recursos públicos.</option>
+                                            <option>Presunta colocación de propaganda en lugares prohibidos.</option>
+                                            <option>Presunta emisión de propaganda.</option>
+                                            <option>Presuntos actos anticipados de precampaña.</option>
+                                            <option>Presunta entrega de propaganda.</option>
+                                            <option>Presunta acción u omisión en el ámbito político o público que tenga por objeto o resultado limitar, anular o menoscabar el ejercicio efectivo de los derechos políticos.</option>
+                                            <option>Presunta acción u omisión en el ámbito político o público que tenga por objeto o resultado limita, anula o menoscabar el acceso al pleno ejercicio de las atribuciones inherentes a su cargo o su función del poder público.</option>
+                                            <option>Presuntamente impedir o restringir su participación como aspirante.</option>
+                                            <option>Presuntamente impedir o restringir su participación como precandidata.</option>
+                                            <option>Presuntamente impedir o restringir su participación como candidata.</option>
+                                            <option>Presuntamente impedir u obstaculizar los derechos de asociación y afiliación en los partidos políticos en razón de género.</option>
+                                            <option>Presuntamente impedir o restringir su incorporación, toma de protesta o acceso al cargo o función para el cual ha sido elegida o nombrada.</option>
+                                            <option>Presuntamente impedir o restringir su reincorporación al cargo o función posterior en los casos de licencia o permiso.</option>
+                                            <option>Cualesquiera otras acciones que lesionen o dañen la dignidad, integridad o libertad de las mujeres en el ejercicio de sus derechos políticos-electorales.</option>
+                                            <option>Otro.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8 ">
+                                <label class="form-control-label">Mención relativa a si la queja o denuncia fue admitida a trámite o si recayó en ella un acuerdo de desechamiento o de incompetencia:</label>
+                                <div class=" form-group">
+                                    <div class=" input-group input-group-merge">
+                                        <select class="form-control">
+                                            <option hidden>Selecciona una opción:</option>
+                                            <option>Primera</option>
+                                            <option>Segunda</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <!-- <div class="col-md-8 ">
+                            <h1> Item List </h1>
+                            <ul>
+                              <li *ngFor="let item of itemList">{{item}}</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" (click)="openModalWithComponent()">Add New Item</button>
+                          </div> -->
+                          
+                          
+                            <!-- <div class="row">
+                             <div class="col-md-8 py-4 text-center">
+                              <h1>List of Users</h1>
+                             </div>
+                            </div> -->
+                            
+                          <div class="col-md-8">
+                            <label class="form-control-label">Síntesis de los trámites realizados para su sustanciación:</label>
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                 <th bgcolor="#C0C0C0" scope="col">Fecha</th>
+                                 <th bgcolor="#C0C0C0" scope="col">Sintesis</th>
+                                </tr>
+                              </thead>
+                               <tbody>
+                                <tr *ngFor="let item of itemList">
+                                 <th scope="row">{{item.fecha}}</th>
+                                 <td>{{item.sintesis}}</td>
+                                 <td>
+                                  <button type="button" class="btn btn-primary" (click)="openModal(editProfileModal, item)">Edit</button>
+                                 </td>
+                                </tr>
+                               </tbody>
+                            </table>
+                            <button type="button" class="btn btn-primary" (click)="openModalWithComponent()">Agregar actuación</button>
+                          </div>
+                          <!-- <ng-template #template>
+                            <div class="modal-header">
+                              <h4 class="modal-title pull-left">Modal</h4>
+                              <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                                <span aria-hidden="true" class="visually-hidden">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              This is a modal.
+                            </div>
+                          </ng-template>  -->
+                          <!-- <button (click)="showSpinner()">Show Spinner</button> -->
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                          <div class="col-md-8 ">
+                              <label class="form-control-label">Recursos presentados en su contra:</label>
+                              <div class=" form-group">
+                                  <div class=" input-group input-group-merge">
+                                      <select class="form-control" name="recursos">
+                                          <option hidden>Selecciona una opción:</option>
+                                          <option>A la fecha no se ha presentado recurso alguno.</option>
+                                          <option>Se presentó recurso consistente en:</option>
+                                      </select>
+                                  </div>
+                                  <div class="=input-group input-group-merge">
+                                    <textarea class="form-control" name="sintesis" rows="3" cols="50"></textarea>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- <app-wizard></app-wizard> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+          
+          </div>
+          <div class="col-md-4">
+            <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "large" color = "#e12362" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" ><b>Guardando... </b></p></ngx-spinner>
+        
+            <!-- <button type="button" class="btn btn-primary" (click)="showSpinner()">Show Spinner</button> -->
+            <button type="submit" class="btn btn-icon btn-default ml-3 ng-star-inserted" (click)="showSpinner()"><i class="fas fa-save"></i><span _ngcontent-omc-c112="" class="btn-inner--text"> Guardar </span></button>
+          
+            <!-- <button _ngcontent-omc-c112="" type="submit" class="btn btn-icon btn-default ml-3 ng-star-inserted" disabled=""><i _ngcontent-omc-c112="" class="fas fa-search"></i><span _ngcontent-omc-c112="" class="btn-inner--text"> Consultar </span></button> -->
+
+          </div>
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+  
+
+</ng-template>
+
+
+  
+  
+
+
+<script>
+    export default {
+      data() {
+        return {
+          dates: {
+            simple: "2018-07-17"
+          }
+        };
+      }
+    };
+</script>
+
+  <!-- <div *ngIf="hello; then div1 else div2"></div>
+  <ng-template #div1>
+        <p>div 1</p>
+  </ng-template>
+  <ng-template #div2>
+    <p>div 2</p>
+  </ng-template>
+
+  <p>Hello es:{{hello}}</p> -->
+  
